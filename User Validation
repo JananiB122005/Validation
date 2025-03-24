@@ -1,0 +1,23 @@
+package task;
+import java.util.Scanner;
+public class UserValidation {
+	public static void main(String args[]) throws NameValidator {
+		Scanner nm = new Scanner(System.in);
+		String name=nm.nextLine().toUpperCase();
+		char[] ch= name.toCharArray();
+		for(char y:ch) {
+			if('A'<= y && 'Z'>=y) {
+				System.out.println("Validation Successfull");
+		}
+			else if('0'<=y && '9'>=y) {
+				throw new NameValidator("number");
+				
+			}
+			else {
+				throw new NameValidator("Symbol");
+			}
+				
+			}
+	}
+
+}
